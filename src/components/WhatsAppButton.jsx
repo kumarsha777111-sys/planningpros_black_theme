@@ -6,7 +6,7 @@ import { toast } from '@/components/ui/use-toast';
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
     // Replace the phone number with your WhatsApp number in international format, e.g., 15551234567
-    const phoneNumber = '9773833051';
+    const phoneNumber = '+918076536172';
     const url = `https://wa.me/${phoneNumber}`;
     window.open(url, '_blank');
   };
