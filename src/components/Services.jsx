@@ -1,0 +1,146 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Code, Users, Briefcase, Headphones, Database, Shield, Zap, Globe } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { toast } from '@/components/ui/use-toast';
+
+const Services = () => {
+  const handleLearnMore = () => {
+    toast({
+      title: "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀"
+    });
+  };
+
+  const services = [
+    {
+      icon: Code,
+      title: "Software Development",
+      description: "Full-stack developers, mobile app specialists, and DevOps engineers ready to accelerate your projects.",
+      features: ["Frontend & Backend", "Mobile Development", "DevOps & Cloud", "Quality Assurance"],
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Database,
+      title: "Data & Analytics",
+      description: "Data scientists, analysts, and engineers to transform your data into actionable business insights.",
+      features: ["Data Science", "Business Intelligence", "Machine Learning", "Database Management"],
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity",
+      description: "Security specialists and compliance experts to protect your digital assets and ensure regulatory compliance.",
+      features: ["Security Auditing", "Penetration Testing", "Compliance Management", "Risk Assessment"],
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      icon: Users,
+      title: "Project Management",
+      description: "Certified project managers and scrum masters to keep your initiatives on track and within budget.",
+      features: ["Agile Methodology", "Resource Planning", "Risk Management", "Stakeholder Communication"],
+      color: "from-green-500 to-teal-500"
+    },
+    {
+      icon: Briefcase,
+      title: "Business Operations",
+      description: "Operations specialists, business analysts, and process improvement experts for operational excellence.",
+      features: ["Process Optimization", "Business Analysis", "Operations Management", "Strategic Planning"],
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Headphones,
+      title: "Customer Support",
+      description: "Multilingual support specialists and customer success managers to enhance your customer experience.",
+      features: ["Technical Support", "Customer Success", "Quality Assurance", "Training & Development"],
+      color: "from-yellow-500 to-orange-500"
+    }
+  ];
+
+  return (
+    <section id="services" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-purple-100 px-4 py-2 rounded-full mb-4">
+            <Zap className="w-4 h-4 text-blue-600" />
+            <span className="text-sm font-medium text-slate-700">Our Services</span>
+          </div>
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+            <span className="gradient-text">Expert Talent</span> for Every Need
+          </h2>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            From cutting-edge technology roles to essential business functions, we provide pre-vetted professionals who integrate seamlessly with your team.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -10 }}
+              className="service-card p-8 rounded-2xl group"
+            >
+              <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <service.icon className="w-8 h-8 text-white" />
+              </div>
+              
+              <h3 className="text-2xl font-bold text-slate-800 mb-4">{service.title}</h3>
+              <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
+              
+              <ul className="space-y-2 mb-8">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center space-x-2 text-slate-700">
+                    <div className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full`}></div>
+                    <span className="text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <Button
+                onClick={handleLearnMore}
+                variant="outline"
+                className="w-full group-hover:bg-slate-50 transition-colors"
+              >
+                Learn More
+                <Globe className="w-4 h-4 ml-2" />
+              </Button>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center mt-16"
+        >
+          <div className="glass-effect p-8 rounded-2xl max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold gradient-text mb-4">One-Time Fee Model</h3>
+            <p className="text-lg text-slate-600 mb-6">
+              No recurring charges, no hidden fees. Pay once and get access to our entire network of pre-vetted professionals for your specific project needs.
+            </p>
+            <Button
+              onClick={handleLearnMore}
+              size="lg"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+            >
+              Get Custom Quote
+            </Button>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
