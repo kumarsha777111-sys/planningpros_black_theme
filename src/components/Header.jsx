@@ -24,10 +24,14 @@ const Header = () => {
     }
   };
 
-  const handleContactClick = () => {
-    toast({
-      title: "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀"
-    });
+  const handleCallClick = () => {
+    window.location.href = 'tel:+918076536172';
+  };
+
+  const handleQuoteClick = () => {
+    const phoneNumber = '+918076536172';
+    const message = encodeURIComponent('Hello Planning Pros!!, I would like a custom quote for your IT services.');
+    window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
   };
 
   return (
@@ -81,7 +85,7 @@ const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <Button
-              onClick={handleContactClick}
+              onClick={handleCallClick}
               variant="outline"
               className="flex items-center space-x-2"
             >
@@ -89,7 +93,7 @@ const Header = () => {
               <span>Call Us</span>
             </Button>
             <Button
-              onClick={handleContactClick}
+              onClick={handleQuoteClick}
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 flex items-center space-x-2"
             >
               <Mail className="w-4 h-4" />

@@ -119,18 +119,24 @@ const Footer = () => {
             <div className="pt-4">
               <span className="text-lg font-semibold block mb-4">Follow Us</span>
               <div className="flex space-x-4">
-                <button onClick={handleSocialClick} className="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
+                <a
+                  href="https://www.linkedin.com/company/planning-pros-consultants/posts/?feedView=all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors"
+                  aria-label="LinkedIn"
+                >
                   <Linkedin className="w-5 h-5" />
-                </button>
-                <button onClick={handleSocialClick} className="w-10 h-10 bg-slate-800 hover:bg-blue-400 rounded-lg flex items-center justify-center transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </button>
-                <button onClick={handleSocialClick} className="w-10 h-10 bg-slate-800 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors">
-                  <Facebook className="w-5 h-5" />
-                </button>
-                <button onClick={handleSocialClick} className="w-10 h-10 bg-slate-800 hover:bg-green-500 rounded-lg flex items-center justify-center transition-colors">
+                </a>
+                <a
+                  href="https://wa.me/+918076536172?text=Hello Planning Pros!!,%20I%20would%20like%20to%20know%20more%20about%20your IT%20services."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-slate-800 hover:bg-green-500 rounded-lg flex items-center justify-center transition-colors"
+                  aria-label="WhatsApp"
+                >
                   <MessageCircle className="w-5 h-5" />
-                </button>
+                </a>
               </div>
             </div>
           </motion.div>
