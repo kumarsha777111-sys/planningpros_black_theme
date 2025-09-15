@@ -5,34 +5,24 @@ import { Users, Star } from 'lucide-react';
 const Team = () => {
   const teamMembers = [
     {
-      name: "Alice Johnson",
+      name: "Hitesh Khurana",
       role: "CEO & Founder",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  image: "/team/hitesh.jpg"
     },
     {
-      name: "Bob Williams",
-      role: "Head of IT Staffing",
-      image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      name: "Karan Gogia",
+      role: "Managing Director",
+  image: "/team/karan.jpg"
     },
     {
-      name: "Carol Davis",
-      role: "HR Solutions Lead",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2561&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      name: "Seema Gupta",
+      role: "IT Lead Manager",
+  image: "/team/seema.jpg"
     },
     {
-      name: "David Lee",
-      role: "Talent Acquisition Manager",
-      image: "https://images.unsplash.com/photo-1507003211169-e69fe1c5a392?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      name: "Eva Green",
-      role: "Client Success Manager",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      name: "Frank White",
-      role: "Operations Director",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      name: "Kamal Chhabra",
+      role: "Accounts Manager",
+  image: "/team/kamal.jpg"
     }
   ];
 
@@ -65,7 +55,7 @@ const Team = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative"
         >
-          <div className="flex overflow-x-auto pb-4 space-x-6 scrollbar-hide lg:scrollbar-default">
+          <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-8 sm:overflow-x-visible sm:pb-0 justify-items-center">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
@@ -93,9 +83,6 @@ const Team = () => {
               </motion.div>
             ))}
           </div>
-          <p className="text-center text-slate-500 text-sm mt-4">
-            Scroll horizontally to see more team members.
-          </p>
         </motion.div>
       </div>
     </section>

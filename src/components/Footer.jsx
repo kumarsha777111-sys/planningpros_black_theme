@@ -13,12 +13,11 @@ const Footer = () => {
       title: "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀"
     });
   };
-  const services = ["Software Development", "Data & Analytics", "Cybersecurity", "Project Management", "Business Operations", "Customer Support"];
-  const company = ["About Us", "Our Process", "Success Stories", "Careers", "Blog", "Contact"];
+  // Removed services and company sections as requested
   const legal = ["Privacy Policy", "Terms of Service", "Cookie Policy", "GDPR Compliance"];
   return <footer className="bg-slate-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <motion.div initial={{
           opacity: 0,
@@ -57,49 +56,43 @@ const Footer = () => {
           </motion.div>
 
           {/* Services */}
-          <motion.div initial={{
-          opacity: 0,
-          y: 50
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.6,
-          delay: 0.1
-        }} className="space-y-6">
-            <span className="text-lg font-semibold">Services</span>
-            <ul className="space-y-3">
-              {services.map((service, index) => <li key={index}>
-                  <button onClick={handleLinkClick} className="text-slate-300 hover:text-white transition-colors text-left">
-                    {service}
-                  </button>
-                </li>)}
-            </ul>
-          </motion.div>
+          {/* Removed Services and Company sections as requested */}
 
-          {/* Company */}
-          <motion.div initial={{
-          opacity: 0,
-          y: 50
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.6,
-          delay: 0.2
-        }} className="space-y-6">
-            <span className="text-lg font-semibold">Company</span>
-            <ul className="space-y-3">
-              {company.map((item, index) => <li key={index}>
-                  <button onClick={handleLinkClick} className="text-slate-300 hover:text-white transition-colors text-left">
-                    {item}
-                  </button>
-                </li>)}
+          {/* Why Choose Us? Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="space-y-6 lg:col-span-2 flex flex-col justify-center"
+          >
+            <span className="text-lg font-semibold mb-2">Why Choose Us?</span>
+            <ul className="space-y-2 text-slate-300">
+              <li>✔️ 10+ Years of Industry Experience</li>
+              <li>✔️ 100+ Satisfied Clients Worldwide</li>
+              <li>✔️ Fast Onboarding & Flexible Engagements</li>
+              <li>✔️ Dedicated Account Managers</li>
+              <li>✔️ Transparent, One-Time Fee Model</li>
+              <li>✔️ Access to Top 2% of Global Talent</li>
             </ul>
+            <div className="grid grid-cols-2 gap-4 mt-6">
+              <div className="bg-slate-800 rounded-lg p-4 text-center">
+                <span className="block text-2xl font-bold text-blue-400">10+</span>
+                <span className="text-slate-400 text-sm">Years Experience</span>
+              </div>
+              <div className="bg-slate-800 rounded-lg p-4 text-center">
+                <span className="block text-2xl font-bold text-blue-400">100+</span>
+                <span className="text-slate-400 text-sm">Clients Served</span>
+              </div>
+              <div className="bg-slate-800 rounded-lg p-4 text-center">
+                <span className="block text-2xl font-bold text-blue-400">50+</span>
+                <span className="text-slate-400 text-sm">Expert Consultants</span>
+              </div>
+              <div className="bg-slate-800 rounded-lg p-4 text-center">
+                <span className="block text-2xl font-bold text-blue-400">24/7</span>
+                <span className="text-slate-400 text-sm">Support</span>
+              </div>
+            </div>
           </motion.div>
 
           {/* Legal & Social */}
@@ -113,7 +106,7 @@ const Footer = () => {
           once: true
         }} transition={{
           duration: 0.6,
-          delay: 0.3
+          delay: 0.4
         }} className="space-y-6">
             <span className="text-lg font-semibold">Legal</span>
             <ul className="space-y-3">
@@ -123,7 +116,6 @@ const Footer = () => {
                   </button>
                 </li>)}
             </ul>
-            
             <div className="pt-4">
               <span className="text-lg font-semibold block mb-4">Follow Us</span>
               <div className="flex space-x-4">
