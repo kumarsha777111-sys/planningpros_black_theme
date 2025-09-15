@@ -21,31 +21,34 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast({
-      title: "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀"
-    });
+    // WhatsApp number (same as used elsewhere)
+    const phoneNumber = '+918076536172';
+  // Compose message (formatted for WhatsApp)
+  const message = `Contact Request from Website\nName: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nMessage: ${formData.message}`;
+  // Automatically redirect to WhatsApp with pre-filled message
+  window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   };
 
   const contactInfo = [
     {
       icon: Phone,
       title: "Call Us",
-      details: "+1 (555) 123-4567",
-      description: "Mon-Fri 9AM-6PM EST",
+      details: "+91-8076536172",
+      description: "Mon-Fri 9AM-6PM IST",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: "hello@planningpros.com",
+      details: "seema@planningpros.in",
       description: "We respond within 2 hours",
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "123 Business Ave, Suite 100",
-      description: "New York, NY 10001",
+      details: "N-4, SN Puri",
+      description: "New Delhi, India 110065",
       color: "from-green-500 to-teal-500"
     }
   ];

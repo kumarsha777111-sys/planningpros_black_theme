@@ -6,9 +6,9 @@ import { toast } from '@/components/ui/use-toast';
 
 const Hero = () => {
   const handleGetStarted = () => {
-    toast({
-      title: "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀"
-    });
+    // Use the same number as WhatsAppButton
+    const phoneNumber = '+918076536172';
+    window.location.href = `tel:${phoneNumber}`;
   };
 
   const scrollToServices = () => {

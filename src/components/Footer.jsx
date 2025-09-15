@@ -42,11 +42,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-slate-300">
                 <Mail className="w-4 h-4" />
-                <span>hello@planningpros.com</span>
+                <span>seema@planningpros.in</span>
               </div>
               <div className="flex items-center space-x-3 text-slate-300">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91-8076536172</span>
               </div>
               <div className="flex items-center space-x-3 text-slate-300">
                 <MapPin className="w-4 h-4" />
@@ -151,7 +151,7 @@ const Footer = () => {
             © 2024 Planning Pros. All rights reserved.
           </p>
           <div className="flex items-center space-x-6 text-slate-400">
-            <span>Made with ❤️ for growing businesses</span>
+            <span>Let's grow businesses</span>
           </div>
         </motion.div>
       </div>

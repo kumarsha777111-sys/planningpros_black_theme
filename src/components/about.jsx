@@ -98,7 +98,7 @@ const About = () => {
                 className="absolute -bottom-6 -left-6 glass-effect p-6 rounded-xl"
               >
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">5+ Years</div>
+                  <div className="text-3xl font-bold gradient-text">10+ Years</div>
                   <div className="text-slate-600">Industry Experience</div>
                 </div>
               </motion.div>
