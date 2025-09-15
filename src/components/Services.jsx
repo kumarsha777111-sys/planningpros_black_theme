@@ -6,9 +6,9 @@ import { toast } from '@/components/ui/use-toast';
 
 const Services = () => {
   const handleLearnMore = () => {
-    toast({
-      title: "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀"
-    });
+    const phoneNumber = '+918076536172';
+    const message = encodeURIComponent('Hello Planning Pros!!, I would like a custom quote for your IT services.');
+    window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
   };
 
   const services = [
@@ -104,15 +104,6 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              
-              <Button
-                onClick={handleLearnMore}
-                variant="outline"
-                className="w-full group-hover:bg-slate-50 transition-colors"
-              >
-                Learn More
-                <Globe className="w-4 h-4 ml-2" />
-              </Button>
             </motion.div>
           ))}
         </div>

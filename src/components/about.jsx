@@ -87,8 +87,8 @@ const About = () => {
             <div className="relative">
               <img 
                 className="w-full h-auto rounded-2xl shadow-2xl"
-                alt="Modern office space with diverse team working together"
-               src="https://images.unsplash.com/photo-1637622124152-33adfabcc923" />
+                alt="IT professionals attending a meeting in a modern office"
+                src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=900&q=80" />
               
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
