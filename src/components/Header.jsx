@@ -144,7 +144,7 @@ const Header = () => {
               </button>
               <div className="flex flex-col space-y-2 pt-4 border-t border-slate-200">
                 <Button
-                  onClick={handleContactClick}
+                  onClick={handleCallClick}
                   variant="outline"
                   className="flex items-center justify-center space-x-2"
                 >
@@ -152,7 +152,7 @@ const Header = () => {
                   <span>Call Us</span>
                 </Button>
                 <Button
-                  onClick={handleContactClick}
+                  onClick={handleQuoteClick}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 flex items-center justify-center space-x-2"
                 >
                   <Mail className="w-4 h-4" />
