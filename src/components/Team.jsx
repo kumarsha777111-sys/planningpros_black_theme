@@ -20,6 +20,16 @@ const Team = () => {
   image: "/team/seema.jpg"
     },
     {
+      name: "Prashant Sah",
+      role: "Senior Accounts Manager",
+  image: "/team/prashant.jpg"
+    },
+    {
+      name: "Shweta Pandey",
+      role: "Talent Acquisition Manager",
+  image: "/team/shweta.jpg"
+    },
+    {
       name: "Kamal Chhabra",
       role: "Accounts Manager",
   image: "/team/kamal.jpg"
@@ -41,7 +51,7 @@ const Team = () => {
             <span className="text-sm font-medium text-slate-900">Meet Our Team</span>
           </div>
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-            The <span className="gradient-text">People Behind</span> Planning Pros
+            The <span className="gradient-text">People Behind</span> Planning Pros & Consultant
           </h2>
           <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
             Our dedicated team of experts is committed to connecting you with the best talent and ensuring your staffing success.
@@ -55,7 +65,7 @@ const Team = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative"
         >
-          <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-8 sm:overflow-x-visible sm:pb-0 justify-items-center">
+          <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide whitespace-nowrap">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
@@ -69,7 +79,7 @@ const Team = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-md"
+                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-center border-4 border-white shadow-md"
                 />
                 <h3 className="text-xl font-bold text-slate-900 mb-1">{member.name}</h3>
                 <p className="text-blue-600 font-medium">{member.role}</p>

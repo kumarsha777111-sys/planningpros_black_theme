@@ -7,49 +7,49 @@ import { toast } from '@/components/ui/use-toast';
 const Services = () => {
   const handleLearnMore = () => {
     const phoneNumber = '+918076536172';
-    const message = encodeURIComponent('Hello Planning Pros!!, I would like a custom quote for your IT services.');
+  const message = encodeURIComponent('Hello Planning Pros & Consultant!!, I would like a custom quote for your IT services.');
     window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
   };
 
   const services = [
     {
       icon: Code,
-      title: "Software Development",
+  title: "Software Developers",
       description: "Full-stack developers, mobile app specialists, and DevOps engineers ready to accelerate your projects.",
       features: ["Frontend & Backend", "Mobile Development", "DevOps & Cloud", "Quality Assurance"],
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Database,
-      title: "Data & Analytics",
+  title: "Data Engineers",
       description: "Data scientists, analysts, and engineers to transform your data into actionable business insights.",
       features: ["Data Science", "Business Intelligence", "Machine Learning", "Database Management"],
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: Shield,
-      title: "Cybersecurity",
+  title: "Cyber Security Specialists",
       description: "Security specialists and compliance experts to protect your digital assets and ensure regulatory compliance.",
       features: ["Security Auditing", "Penetration Testing", "Compliance Management", "Risk Assessment"],
       color: "from-red-500 to-orange-500"
     },
     {
       icon: Users,
-      title: "Project Management",
+  title: "Project Managers",
       description: "Certified project managers and scrum masters to keep your initiatives on track and within budget.",
       features: ["Agile Methodology", "Resource Planning", "Risk Management", "Stakeholder Communication"],
       color: "from-green-500 to-teal-500"
     },
     {
       icon: Briefcase,
-      title: "Business Operations",
+  title: "Business Specialists",
       description: "Operations specialists, business analysts, and process improvement experts for operational excellence.",
       features: ["Process Optimization", "Business Analysis", "Operations Management", "Strategic Planning"],
       color: "from-indigo-500 to-purple-500"
     },
     {
       icon: Headphones,
-      title: "Customer Support",
+  title: "Customer Support Specialists",
       description: "Multilingual support specialists and customer success managers to enhance your customer experience.",
       features: ["Technical Support", "Customer Success", "Quality Assurance", "Training & Development"],
       color: "from-yellow-500 to-orange-500"

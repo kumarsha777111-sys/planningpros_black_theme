@@ -62,7 +62,7 @@ const Hero = () => {
                 transition={{ delay: 0.4 }}
                 className="text-lg text-white leading-relaxed max-w-lg"
               >
-                Planning Pros delivers top-tier IT and non-IT professionals through our streamlined staff augmentation services. One-time fee, maximum value.
+                Planning Pros & Consultant delivers top-tier IT and non-IT professionals through our streamlined staff augmentation services. One-time fee, maximum value.
               </motion.p>
             </div>
 

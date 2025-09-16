@@ -33,21 +33,21 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "+91-8076536172",
+      details: "+91-8920776116",
       description: "Mon-Fri 9AM-6PM IST",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: "seema@planningpros.in",
+      details: "karan@planningpros.in",
       description: "We respond within 2 hours",
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "N-4, SN Puri",
+      details: "N-4, Private Colony, Sri Niwas Puri",
       description: "New Delhi, India 110065",
       color: "from-green-500 to-teal-500"
     }
@@ -89,7 +89,10 @@ const Contact = () => {
             Ready to <span className="gradient-text">Scale Your Team?</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Let's discuss your staffing needs and find the perfect professionals for your team. Get started with a free consultation today.
+            <span className="text-base font-semibold text-white drop-shadow-lg" style={{textShadow: '0 2px 12px rgba(0,0,0,0.25)'}}>
+              Let's discuss your staffing needs and find the perfect professionals for your team.<br />
+              <span className="text-blue-400">Get started with a free consultation today.</span>
+            </span>
           </p>
         </motion.div>
 

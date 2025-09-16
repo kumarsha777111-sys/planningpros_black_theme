@@ -30,7 +30,7 @@ const Header = () => {
 
   const handleQuoteClick = () => {
     const phoneNumber = '+918076536172';
-    const message = encodeURIComponent('Hello Planning Pros!!, I would like a custom quote for your IT services.');
+  const message = encodeURIComponent('Hello Planning Pros & Consultant!!, I would like a custom quote for your IT services.');
     window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
   };
 
@@ -53,7 +53,7 @@ const Header = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <Users className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold gradient-text">Planning Pros</span>
+            <span className="text-2xl font-bold gradient-text">Planning Pros & Consultant</span>
           </motion.div>
 
           {/* Desktop Navigation */}

@@ -73,8 +73,8 @@ const Process = () => {
                       <div className={`w-20 h-20 bg-gradient-to-r ${step.color} rounded-2xl flex items-center justify-center shadow-lg`}>
                         <step.icon className="w-10 h-10 text-white" />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md">
-                        <span className="text-sm font-bold text-white">{step.step}</span>
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-blue-100 via-purple-100 to-slate-100 rounded-full flex items-center justify-center shadow-md border-2 border-white">
+                        <span className="text-sm font-bold text-blue-700">{step.step}</span>
                       </div>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
