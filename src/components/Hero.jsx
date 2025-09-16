@@ -50,7 +50,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl lg:text-6xl font-bold leading-tight"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
               >
                 Scale Your Team with
                 <span className="gradient-text block">Expert Talent</span>
@@ -60,9 +60,9 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-lg text-white leading-relaxed max-w-lg"
+                className="text-base md:text-lg text-white leading-relaxed max-w-lg"
               >
-                Planning Pros & Consultant delivers top-tier IT and non-IT professionals through our streamlined staff augmentation services. One-time fee, maximum value.
+                Planning Pros <span className="whitespace-nowrap">&amp; Consultant</span> delivers top-tier IT and non-IT professionals through our streamlined staff augmentation services. One-time fee, maximum value.
               </motion.p>
             </div>
 

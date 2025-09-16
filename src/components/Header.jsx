@@ -53,7 +53,9 @@ const Header = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <Users className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold gradient-text">Planning Pros & Consultant</span>
+            <span className="text-xl md:text-2xl font-bold gradient-text">
+              Planning Pros <span className="whitespace-nowrap">&amp; Consultant</span>
+            </span>
           </motion.div>
 
           {/* Desktop Navigation */}

@@ -66,19 +66,19 @@ const Services = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-purple-100 px-4 py-2 rounded-full mb-4">
-            <Zap className="w-4 h-4 text-blue-600" />
-            <span className="text-sm font-medium text-slate-700">Our Services</span>
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-purple-100 px-3 py-1.5 rounded-full mb-3">
+            <Zap className="w-3.5 h-3.5 text-blue-600" />
+            <span className="text-xs md:text-sm font-medium text-slate-700">Our Services</span>
           </div>
-          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3">
             <span className="gradient-text">Expert Talent</span> <span className="text-white">for Every Need</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xs md:text-sm text-slate-200 max-w-xl mx-auto leading-tight">
             <span className="text-slate-200">From cutting-edge technology roles to essential business functions, we provide pre-vetted professionals who integrate seamlessly with your team.</span>
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -87,20 +87,20 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="service-card p-8 rounded-2xl group bg-gradient-to-br from-white via-slate-100 to-slate-200 shadow-2xl border border-slate-200"
+              className="service-card p-5 rounded-lg group bg-gradient-to-br from-white via-slate-100 to-slate-200 shadow-2xl border border-slate-200"
             >
-              <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <service.icon className="w-8 h-8 text-white" />
+              <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                <service.icon className="w-5 h-5 text-white" />
               </div>
               
-              <h3 className="text-2xl font-bold text-slate-800 mb-4">{service.title}</h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
+              <h3 className="text-base font-bold text-slate-800 mb-1.5">{service.title}</h3>
+              <p className="text-slate-600 mb-3 leading-snug text-xs md:text-sm">{service.description}</p>
               
-              <ul className="space-y-2 mb-8">
+              <ul className="space-y-1 mb-4">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center space-x-2 text-slate-700">
-                    <div className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full`}></div>
-                    <span className="text-sm">{feature}</span>
+                    <div className={`w-1.5 h-1.5 bg-gradient-to-r ${service.color} rounded-full`}></div>
+                    <span className="text-xs md:text-sm">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -113,17 +113,17 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mt-16"
+          className="text-center mt-12"
         >
-          <div className="glass-effect p-8 rounded-2xl max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold gradient-text mb-4">One-Time Fee Model</h3>
-            <p className="text-lg text-slate-600 mb-6">
+          <div className="glass-effect p-5 md:p-6 rounded-lg max-w-2xl mx-auto">
+            <h3 className="text-xl md:text-2xl font-bold gradient-text mb-2">One-Time Fee Model</h3>
+            <p className="text-xs md:text-sm text-slate-600 mb-4">
               No recurring charges, no hidden fees. Pay once and get access to our entire network of pre-vetted professionals for your specific project needs.
             </p>
             <Button
               onClick={handleLearnMore}
-              size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+              size="sm"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-5 py-2.5 text-sm"
             >
               Get Custom Quote
             </Button>

@@ -84,6 +84,36 @@ body {
   scrollbar-width: none;
 }
 
+/* Dark textured background utilities */
+.bg-dark-texture {
+  --bg-color: #0b1220;
+  background-color: var(--bg-color);
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px, 40px 40px;
+  background-position: 0 0, 10px 10px;
+}
+
+.bg-dark-gradient {
+  background-image:
+    radial-gradient(1200px 400px at 50% -200px, rgba(88, 101, 242, 0.15), transparent),
+    radial-gradient(800px 300px at 100% 0%, rgba(168, 85, 247, 0.08), transparent);
+}
+
+/* Combined surface: texture + glow gradients */
+.bg-dark-surface {
+  --bg-color: #0b1220;
+  background-color: var(--bg-color);
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    radial-gradient(1200px 400px at 50% -200px, rgba(88, 101, 242, 0.18), transparent),
+    radial-gradient(800px 300px at 100% 0%, rgba(168, 85, 247, 0.12), transparent);
+  background-size: 20px 20px, 40px 40px, auto, auto;
+  background-position: 0 0, 10px 10px, center, center;
+}
+
 /* Default scrollbar for larger screens */
 .lg\:scrollbar-default::-webkit-scrollbar {
   display: block;

@@ -43,14 +43,14 @@ const About = () => {
             <div>
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-purple-100 px-4 py-2 rounded-full mb-4">
                 <Award className="w-4 h-4 text-blue-600" />
-                <span className="text-base font-bold text-slate-900 drop-shadow-lg" style={{textShadow: '0 2px 8px rgba(0,0,0,0.10)'}}>About Planning Pros & Consultant</span>
+                <span className="text-base font-bold text-slate-900 drop-shadow-lg" style={{textShadow: '0 2px 8px rgba(0,0,0,0.10)'}}>About Planning Pros <span className="whitespace-nowrap">&amp; Consultant</span></span>
               </div>
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-5">
                 Your Trusted Partner in
                 <span className="gradient-text block">Staff Augmentation</span>
               </h2>
-              <p className="text-lg text-slate-200 leading-relaxed mb-8">
-                Planning Pros & Consultant revolutionizes how companies access top-tier talent. Our innovative one-time fee model eliminates the complexity of traditional staffing, providing you with immediate access to pre-vetted IT and non-IT professionals who seamlessly integrate with your existing teams.
+              <p className="text-base md:text-lg text-slate-200 leading-normal mb-6">
+                Planning Pros <span className="whitespace-nowrap">&amp; Consultant</span> revolutionizes how companies access top-tier talent. Our innovative one-time fee model eliminates the complexity of traditional staffing, providing you with immediate access to pre-vetted IT and non-IT professionals who seamlessly integrate with your existing teams.
               </p>
             </div>
 
@@ -68,8 +68,8 @@ const About = () => {
                     <value.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
-                    <p className="text-slate-200 leading-relaxed">{value.description}</p>
+                    <h3 className="text-lg md:text-xl font-semibold text-white mb-1.5">{value.title}</h3>
+                    <p className="text-slate-200 leading-normal text-sm md:text-base">{value.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -95,17 +95,17 @@ const About = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.6 }}
-                className="absolute -bottom-6 -left-6 glass-effect p-6 rounded-xl"
+                className="absolute -bottom-6 -left-6 glass-effect p-4 rounded-xl"
               >
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">10+ Years</div>
-                  <div className="text-slate-900">Industry Experience</div>
+                  <div className="text-2xl md:text-3xl font-bold gradient-text">10+ Years</div>
+                  <div className="text-xs md:text-sm text-slate-900">Industry Experience</div>
                 </div>
               </motion.div>
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -113,13 +113,13 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                  className="bg-gradient-to-br from-white via-slate-100 to-slate-200 p-6 rounded-2xl text-center group shadow-2xl hover:shadow-2xl transition-shadow border border-slate-200"
+                  className="bg-gradient-to-br from-white via-slate-100 to-slate-200 p-4 rounded-xl text-center group shadow-2xl hover:shadow-2xl transition-shadow border border-slate-200"
                 >
-                  <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
-                    <stat.icon className="w-6 h-6 text-white" />
+                  <div className={`w-10 h-10 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform`}>
+                    <stat.icon className="w-5 h-5 text-white" />
                   </div>
-                  <div className="text-2xl font-bold gradient-text mb-1">{stat.number}</div>
-                  <div className="text-sm text-slate-900">{stat.label}</div>
+                  <div className="text-xl font-bold gradient-text mb-1">{stat.number}</div>
+                  <div className="text-xs md:text-sm text-slate-900">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
