@@ -15,7 +15,10 @@ const Footer = () => {
   };
   // Removed services and company sections as requested
   const legal = ["Privacy Policy", "Terms of Service", "Cookie Policy", "GDPR Compliance"];
-  return <footer className="bg-slate-900 text-white">
+  return (
+    <>
+      <div className="w-full border-t border-slate-700 mb-0"></div>
+      <footer className="bg-slate-900 text-white">
       <div className="container mx-auto px-4 py-16">
   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -161,6 +164,8 @@ const Footer = () => {
           </div>
         </motion.div>
       </div>
-    </footer>;
+      </footer>
+    </>
+  );
 };
 export default Footer;

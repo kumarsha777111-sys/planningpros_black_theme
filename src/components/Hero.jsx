@@ -19,7 +19,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 hero-gradient opacity-10"></div>
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 floating-animation"></div>
@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 floating-animation" style={{ animationDelay: '4s' }}></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+  <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -50,7 +50,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-5xl lg:text-7xl font-bold leading-tight"
+                className="text-4xl lg:text-6xl font-bold leading-tight"
               >
                 Scale Your Team with
                 <span className="gradient-text block">Expert Talent</span>
@@ -60,7 +60,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-xl text-slate-600 leading-relaxed max-w-lg"
+                className="text-lg text-white leading-relaxed max-w-lg"
               >
                 Planning Pros delivers top-tier IT and non-IT professionals through our streamlined staff augmentation services. One-time fee, maximum value.
               </motion.p>
@@ -130,7 +130,7 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8 }}
-                className="absolute -top-6 -left-6 glass-effect p-4 rounded-xl floating-animation"
+                className="absolute top-16 -left-6 glass-effect p-4 rounded-xl floating-animation"
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">

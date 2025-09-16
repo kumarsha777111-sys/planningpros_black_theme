@@ -39,7 +39,9 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'glass-effect' : 'bg-transparent'
+        isScrolled
+          ? 'bg-gray-900/80 backdrop-blur-lg border-b border-white/20 shadow-xl text-white'
+          : 'bg-transparent text-white'
       }`}
     >
       <div className="container mx-auto px-4 py-4">
@@ -58,25 +60,25 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('services')}
-              className="text-slate-700 hover:text-blue-600 transition-colors font-medium"
+              className="text-white hover:text-purple-400 transition-colors font-medium"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-slate-700 hover:text-blue-600 transition-colors font-medium"
+              className="text-white hover:text-purple-400 transition-colors font-medium"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('process')}
-              className="text-slate-700 hover:text-blue-600 transition-colors font-medium"
+              className="text-white hover:text-purple-400 transition-colors font-medium"
             >
               Process
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-slate-700 hover:text-blue-600 transition-colors font-medium"
+              className="text-white hover:text-purple-400 transition-colors font-medium"
             >
               Contact
             </button>

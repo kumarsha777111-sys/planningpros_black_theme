@@ -57,7 +57,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+  <section id="services" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -71,10 +71,10 @@ const Services = () => {
             <span className="text-sm font-medium text-slate-700">Our Services</span>
           </div>
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-            <span className="gradient-text">Expert Talent</span> for Every Need
+            <span className="gradient-text">Expert Talent</span> <span className="text-white">for Every Need</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            From cutting-edge technology roles to essential business functions, we provide pre-vetted professionals who integrate seamlessly with your team.
+            <span className="text-slate-200">From cutting-edge technology roles to essential business functions, we provide pre-vetted professionals who integrate seamlessly with your team.</span>
           </p>
         </motion.div>
 
@@ -87,7 +87,7 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="service-card p-8 rounded-2xl group"
+              className="service-card p-8 rounded-2xl group bg-gradient-to-br from-white via-slate-100 to-slate-200 shadow-2xl border border-slate-200"
             >
               <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <service.icon className="w-8 h-8 text-white" />

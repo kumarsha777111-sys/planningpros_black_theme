@@ -35,7 +35,7 @@ const Process = () => {
   ];
 
   return (
-    <section id="process" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+  <section id="process" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -46,12 +46,12 @@ const Process = () => {
         >
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-purple-100 px-4 py-2 rounded-full mb-4">
             <Rocket className="w-4 h-4 text-blue-600" />
-            <span className="text-sm font-medium text-slate-700">Our Process</span>
+            <span className="text-sm font-medium text-slate-900">Our Process</span>
           </div>
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
             <span className="gradient-text">Simple & Efficient</span> Process
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
             From initial consultation to successful integration, our streamlined 4-step process ensures you get the right talent quickly and efficiently.
           </p>
         </motion.div>
@@ -74,11 +74,11 @@ const Process = () => {
                         <step.icon className="w-10 h-10 text-white" />
                       </div>
                       <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md">
-                        <span className="text-sm font-bold text-slate-700">{step.step}</span>
+                        <span className="text-sm font-bold text-white">{step.step}</span>
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold text-slate-800 mb-3">{step.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{step.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
+                    <p className="text-slate-200 leading-relaxed">{step.description}</p>
                   </motion.div>
                   
                   {index < steps.length - 1 && (
@@ -120,8 +120,8 @@ const Process = () => {
                   )}
                 </div>
                 <div className="flex-1 pt-2">
-                  <h3 className="text-xl font-bold text-slate-800 mb-3">{step.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{step.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
+                    <p className="text-slate-200 leading-relaxed">{step.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -137,22 +137,23 @@ const Process = () => {
           className="mt-16 text-center"
         >
           <div className="glass-effect p-8 rounded-2xl max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold gradient-text mb-4">Average Timeline: 3-5 Days</h3>
-            <p className="text-lg text-slate-600 mb-6">
-              From initial contact to candidate selection, our efficient process typically takes just 3-5 business days. Rush projects can be accommodated within 24-48 hours.
+            <h3 className="text-3xl font-bold gradient-text mb-3 drop-shadow">Average Timeline: 3-5 Days</h3>
+            <p className="text-base text-slate-800 mb-6 font-normal">
+              From initial contact to candidate selection, our efficient process typically takes just 3-5 business days.<br />
+              <span className="text-slate-600">Rush projects can be accommodated within 24-48 hours.</span>
             </p>
-            <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-2xl font-bold text-blue-600">Day 1</div>
-                <div className="text-slate-600">Consultation & Requirements</div>
+                <div className="text-xl font-bold text-blue-600 mb-1">Day 1</div>
+                <div className="text-base text-slate-900 font-medium">Consultation & Requirements</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-purple-600">Day 2-3</div>
-                <div className="text-slate-600">Talent Matching & Vetting</div>
+                <div className="text-xl font-bold text-purple-600 mb-1">Day 2-3</div>
+                <div className="text-base text-slate-900 font-medium">Talent Matching & Vetting</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-green-600">Day 4-5</div>
-                <div className="text-slate-600">Presentation & Selection</div>
+                <div className="text-xl font-bold text-green-600 mb-1">Day 4-5</div>
+                <div className="text-base text-slate-900 font-medium">Presentation & Selection</div>
               </div>
             </div>
           </div>

@@ -72,7 +72,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white">
+  <section id="contact" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -103,16 +103,14 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-3xl font-bold text-slate-800 mb-4">Send us a message</h3>
-              <p className="text-slate-600 mb-8">
-                Fill out the form below and we'll get back to you within 2 hours during business hours.
-              </p>
+              <h3 className="text-3xl font-bold text-slate-200 mb-4">Send us a message</h3>
+              <p className="text-slate-200 mb-8">Fill out the form below and we'll get back to you within 2 hours during business hours.</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-200 mb-2">
                     Full Name *
                   </label>
                   <input
@@ -127,7 +125,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-200 mb-2">
                     Email Address *
                   </label>
                   <input
@@ -144,7 +142,7 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-slate-200 mb-2">
                   Company Name
                 </label>
                 <input
@@ -159,7 +157,7 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-slate-200 mb-2">
                   Project Details *
                 </label>
                 <textarea
@@ -194,8 +192,8 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-3xl font-bold text-slate-800 mb-4">Get in touch</h3>
-              <p className="text-slate-600 mb-8">
+              <h3 className="text-3xl font-bold text-white mb-4">Get in touch</h3>
+              <p className="text-slate-200 mb-8">
                 Prefer to speak directly? We're here to help through multiple channels.
               </p>
             </div>
@@ -215,8 +213,8 @@ const Contact = () => {
                       <info.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-slate-800 mb-1">{info.title}</h4>
-                      <p className="text-slate-900 font-medium mb-1">{info.details}</p>
+                      <h4 className="text-lg font-semibold text-slate-900 mb-1">{info.title}</h4>
+                      <p className="text-slate-800 font-medium mb-1">{info.details}</p>
                       <p className="text-sm text-slate-600">{info.description}</p>
                     </div>
                   </div>
@@ -224,27 +222,6 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="space-y-6 pt-8">
-              <h4 className="text-xl font-bold text-slate-800">Why Choose Planning Pros?</h4>
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                  className="flex items-start space-x-4"
-                >
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h5 className="font-semibold text-slate-800 mb-1">{feature.title}</h5>
-                    <p className="text-sm text-slate-600">{feature.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </div>
