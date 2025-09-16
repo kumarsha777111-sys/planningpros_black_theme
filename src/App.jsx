@@ -6,6 +6,7 @@ import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import About from '@/components/about';
 import Team from '@/components/Team';
+import Clients from '@/components/Clients';
 import Process from '@/components/Process';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -22,11 +23,12 @@ function App() {
       </Helmet>
       
       <div className="min-h-screen">
-        <Header />
-        <Hero />
-        <Services />
-        <About />
-        <Team />
+    <Header />
+    <Hero />
+    <Clients />
+    <Services />
+    <About />
+    <Team />
         <Process />
         <Contact />
         <Footer />
