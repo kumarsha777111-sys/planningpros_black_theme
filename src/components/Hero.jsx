@@ -19,7 +19,7 @@ const Hero = () => {
   };
 
   return (
-  <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <section className="relative min-h-screen flex items-center justify-center overflow-hidden mt-16 md:mt-0">
       {/* Background Elements */}
       <div className="absolute inset-0 hero-gradient opacity-10"></div>
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 floating-animation"></div>
@@ -27,13 +27,13 @@ const Hero = () => {
       <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 floating-animation" style={{ animationDelay: '4s' }}></div>
 
       <div className="container mx-auto px-4 relative z-10">
-  <div className="grid lg:grid-cols-2 gap-12 items-center pt-24 md:pt-0">
+  <div className="grid lg:grid-cols-2 gap-8 items-center pt-4 md:pt-0">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-5"
           >
             <div className="space-y-4">
               <motion.div
@@ -62,7 +62,7 @@ const Hero = () => {
                 transition={{ delay: 0.4 }}
                 className="text-base md:text-lg text-white leading-relaxed max-w-lg"
               >
-                Planning Pros <span className="whitespace-nowrap">&amp; Consultant</span> delivers top-tier IT and non-IT professionals through our streamlined staff augmentation services. One-time fee, maximum value.
+                Planning Pros & Consultant delivers top-tier IT and non-IT professionals through our streamlined staff augmentation services. One-time fee, maximum value.
               </motion.p>
             </div>
 
@@ -121,16 +121,15 @@ const Hero = () => {
             <div className="relative">
               <img 
                 className="w-full h-auto rounded-2xl shadow-2xl"
-                alt="Professional team collaboration in modern office"
-                src="https://images.unsplash.com/photo-1681184025442-1517cb9319c1" 
+                alt="Team member Shweta"
+                src="/team/main.jpg" 
               />
-              
               {/* Floating Cards */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8 }}
-                className="absolute top-16 -left-6 glass-effect p-4 rounded-xl floating-animation"
+                className="absolute top-16 -left-6 glass-effect p-2 rounded-lg floating-animation"
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
@@ -147,7 +146,7 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1 }}
-                className="absolute -bottom-6 -right-6 glass-effect p-4 rounded-xl floating-animation"
+                className="absolute -bottom-6 -right-6 glass-effect p-2 rounded-lg floating-animation"
                 style={{ animationDelay: '3s' }}
               >
                 <div className="flex items-center space-x-3">

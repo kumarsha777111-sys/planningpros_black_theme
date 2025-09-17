@@ -39,7 +39,7 @@ const Footer = () => {
                 alt="Planning Pros & Consultant logo"
                 className="w-10 h-10 rounded-md object-cover border-4 border-gray-300 shadow-[0_0_12px_2px_rgba(192,192,192,0.7)]"
               />
-              <span className="text-2xl font-bold">Planning Pros & Consultant</span>
+              <span className="text-2xl font-bold">Planning Pros <span className="whitespace-nowrap">& Consultant</span></span>
             </div>
             <p className="text-slate-300 leading-relaxed">
               Your trusted partner in IT staff augmentation. We connect businesses with top-tier professionals through our innovative one-time fee model.
