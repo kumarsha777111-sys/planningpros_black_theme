@@ -63,7 +63,7 @@ const Clients = () => {
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                <span className="text-base md:text-lg text-slate-200 text-center font-semibold">{client.name}</span>
+                <span className="text-sm md:text-base text-slate-200 text-center font-semibold">{client.name}</span>
               </div>
             ))}
           </div>

@@ -50,10 +50,12 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <Users className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-xl md:text-2xl font-bold gradient-text">
+            <img
+              src="/team/pp.jpg"
+              alt="Planning Pros & Consultant logo"
+              className="w-10 h-10 rounded-md object-cover border-4 border-gray-300 shadow-[0_0_12px_2px_rgba(192,192,192,0.7)]"
+            />
+            <span className="text-2xl font-bold gradient-text">
               Planning Pros <span className="whitespace-nowrap">&amp; Consultant</span>
             </span>
           </motion.div>
