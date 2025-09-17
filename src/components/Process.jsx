@@ -48,10 +48,10 @@ const Process = () => {
             <Rocket className="w-3.5 h-3.5 text-blue-600" />
             <span className="text-xs md:text-sm font-medium text-slate-900">Our Process</span>
           </div>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">
+          <h2 className="text-3xl lg:text-5xl font-bold mb-4">
             <span className="gradient-text">Simple & Efficient</span> Process
           </h2>
-          <p className="text-xs md:text-sm text-slate-200 max-w-xl mx-auto leading-tight">
+          <p className="text-base md:text-lg text-slate-200 max-w-2xl mx-auto leading-snug">
             From initial consultation to successful integration, our streamlined 4-step process ensures you get the right talent quickly and efficiently.
           </p>
         </motion.div>
@@ -136,24 +136,24 @@ const Process = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-16 text-center"
         >
-          <div className="glass-effect p-5 rounded-xl max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold gradient-text mb-2 drop-shadow">Average Timeline: 3-5 Days</h3>
-            <p className="text-xs text-slate-800 mb-4 font-normal">
+          <div className="glass-effect p-6 rounded-2xl max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold gradient-text mb-2 drop-shadow">Average Timeline: 3-5 Days</h3>
+            <p className="text-sm text-slate-800 mb-5 font-normal">
               From initial contact to candidate selection, our efficient process typically takes just 3-5 business days.<br />
               <span className="text-slate-600">Rush projects can be accommodated within 24-48 hours.</span>
             </p>
-            <div className="grid md:grid-cols-3 gap-4 text-center">
+            <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-base font-bold text-blue-600 mb-0.5">Day 1</div>
-                <div className="text-xs text-slate-900 font-medium">Consultation & Requirements</div>
+                <div className="text-lg font-bold text-blue-600 mb-1">Day 1</div>
+                <div className="text-sm text-slate-900 font-medium">Consultation & Requirements</div>
               </div>
               <div>
-                <div className="text-base font-bold text-purple-600 mb-0.5">Day 2-3</div>
-                <div className="text-xs text-slate-900 font-medium">Talent Matching & Vetting</div>
+                <div className="text-lg font-bold text-purple-600 mb-1">Day 2-3</div>
+                <div className="text-sm text-slate-900 font-medium">Talent Matching & Vetting</div>
               </div>
               <div>
-                <div className="text-base font-bold text-green-600 mb-0.5">Day 4-5</div>
-                <div className="text-xs text-slate-900 font-medium">Presentation & Selection</div>
+                <div className="text-lg font-bold text-green-600 mb-1">Day 4-5</div>
+                <div className="text-sm text-slate-900 font-medium">Presentation & Selection</div>
               </div>
             </div>
           </div>

@@ -81,22 +81,22 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-purple-100 px-3 py-1.5 rounded-full mb-3">
-            <Mail className="w-3.5 h-3.5 text-blue-600" />
-            <span className="text-xs md:text-sm font-medium text-slate-700">Get In Touch</span>
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-purple-100 px-4 py-2 rounded-full mb-4">
+            <Mail className="w-4 h-4 text-blue-600" />
+            <span className="text-sm font-medium text-slate-700">Get In Touch</span>
           </div>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3">
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
             Ready to <span className="gradient-text">Scale Your Team?</span>
           </h2>
-          <p className="text-xs md:text-sm text-slate-200 max-w-xl mx-auto leading-tight">
-            <span className="font-semibold text-white drop-shadow-lg" style={{textShadow: '0 2px 12px rgba(0,0,0,0.25)'}}>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <span className="text-base font-semibold text-white drop-shadow-lg" style={{textShadow: '0 2px 12px rgba(0,0,0,0.25)'}}>
               Let's discuss your staffing needs and find the perfect professionals for your team.<br />
               <span className="text-blue-400">Get started with a free consultation today.</span>
             </span>
           </p>
         </motion.div>
 
-  <div className="grid lg:grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -106,14 +106,14 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-lg md:text-xl font-bold text-slate-200 mb-2">Send us a message</h3>
-              <p className="text-xs md:text-sm text-slate-200 mb-4">Fill out the form below and we'll get back to you within 2 hours during business hours.</p>
+              <h3 className="text-3xl font-bold text-slate-200 mb-4">Send us a message</h3>
+              <p className="text-slate-200 mb-8">Fill out the form below and we'll get back to you within 2 hours during business hours.</p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid md:grid-cols-2 gap-5">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-xs md:text-sm font-medium text-slate-200 mb-1.5">
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-200 mb-2">
                     Full Name *
                   </label>
                   <input
@@ -123,12 +123,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3.5 py-2.5 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                     placeholder="John Doe"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-xs md:text-sm font-medium text-slate-200 mb-1.5">
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-200 mb-2">
                     Email Address *
                   </label>
                   <input
@@ -138,14 +138,14 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3.5 py-2.5 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                     placeholder="john@company.com"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="company" className="block text-xs md:text-sm font-medium text-slate-200 mb-1.5">
+                <label htmlFor="company" className="block text-sm font-medium text-slate-200 mb-2">
                   Company Name
                 </label>
                 <input
@@ -154,13 +154,13 @@ const Contact = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
-                  className="w-full px-3.5 py-2.5 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                   placeholder="Your Company"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-xs md:text-sm font-medium text-slate-200 mb-1.5">
+                <label htmlFor="message" className="block text-sm font-medium text-slate-200 mb-2">
                   Project Details *
                 </label>
                 <textarea
@@ -169,16 +169,16 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  rows={5}
-                  className="w-full px-3.5 py-2.5 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none text-sm"
+                  rows={6}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
                   placeholder="Tell us about your staffing needs, project timeline, required skills, and team size..."
                 ></textarea>
               </div>
               
               <Button
                 type="submit"
-                size="sm"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base py-3"
+                size="lg"
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg py-4"
               >
                 Send Message
                 <Send className="w-5 h-5 ml-2" />
@@ -195,13 +195,13 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-3">Get in touch</h3>
-              <p className="text-sm md:text-base text-slate-200 mb-6">
+              <h3 className="text-3xl font-bold text-white mb-4">Get in touch</h3>
+              <p className="text-slate-200 mb-8">
                 Prefer to speak directly? We're here to help through multiple channels.
               </p>
             </div>
 
-            <div className="space-y-5">
+            <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={index}
@@ -209,16 +209,16 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                  className="glass-effect p-5 rounded-lg hover:shadow-lg transition-shadow group"
+                  className="glass-effect p-6 rounded-xl hover:shadow-lg transition-shadow group"
                 >
                   <div className="flex items-start space-x-4">
-                    <div className={`w-10 h-10 bg-gradient-to-r ${info.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                      <info.icon className="w-5 h-5 text-white" />
+                    <div className={`w-12 h-12 bg-gradient-to-r ${info.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                      <info.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-base font-semibold text-slate-900 mb-0.5">{info.title}</h4>
-                      <p className="text-slate-800 font-medium text-sm mb-0.5">{info.details}</p>
-                      <p className="text-xs text-slate-600">{info.description}</p>
+                      <h4 className="text-lg font-semibold text-slate-900 mb-1">{info.title}</h4>
+                      <p className="text-slate-800 font-medium mb-1">{info.details}</p>
+                      <p className="text-sm text-slate-600">{info.description}</p>
                     </div>
                   </div>
                 </motion.div>
