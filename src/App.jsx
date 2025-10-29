@@ -1,9 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Toaster } from '@/components/ui/toaster';
+import SplashScreen from '@/components/SplashScreen';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
+import Gallery from '@/components/Gallery';
 import About from '@/components/about';
 import Team from '@/components/Team';
 import Clients from '@/components/Clients';
@@ -22,11 +24,14 @@ function App() {
         <meta property="og:description" content="Planning Pros provides expert IT and non-IT staff augmentation services with one-time fee HR solutions. Scale your team efficiently with our professional resources." />
       </Helmet>
       
+      <SplashScreen />
+      
       <div className="min-h-screen">
     <Header />
     <Hero />
     <Clients />
     <Services />
+    <Gallery />
     <About />
     <Team />
         <Process />
