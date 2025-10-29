@@ -124,7 +124,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    placeholder="John Doe"
+                    placeholder="Enter your name"
                   />
                 </div>
                 <div>
@@ -139,7 +139,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    placeholder="john@company.com"
+                    placeholder="Enter your email address"
                   />
                 </div>
               </div>
@@ -155,7 +155,7 @@ const Contact = () => {
                   value={formData.company}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Your Company"
+                  placeholder="Enter your company name"
                 />
               </div>
               

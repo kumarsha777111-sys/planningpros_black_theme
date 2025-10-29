@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Star } from 'lucide-react';
 
@@ -36,12 +36,8 @@ const Team = () => {
     }
   ];
 
-  const [paused, setPaused] = useState(false);
-  const containerRef = useRef(null);
 
-  const handlePointerDown = () => setPaused(true);
-  const handlePointerUp = () => setPaused(false);
-  const handlePointerLeave = () => setPaused(false);
+
 
   return (
   <section className="py-20 bg-dark-surface">
@@ -58,7 +54,7 @@ const Team = () => {
             <span className="text-sm font-medium text-slate-900">Meet Our Team</span>
           </div>
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3">
-            The <span className="gradient-text">People Behind</span> Planning Pros & Consultant
+            The <span className="gradient-text">People Behind</span> Planning Pros & Consultants
           </h2>
           <p className="text-xs md:text-sm lg:text-base text-slate-200 max-w-2xl mx-auto leading-snug">
             Our dedicated team of experts is committed to connecting you with the best
@@ -66,27 +62,20 @@ const Team = () => {
           </p>
         </motion.div>
 
-        <div
-          ref={containerRef}
-          className={`relative group ${paused ? 'marquee-paused' : ''} overflow-hidden sm:overflow-hidden overflow-x-auto no-scrollbar`}
-          onPointerDown={handlePointerDown}
-          onPointerUp={handlePointerUp}
-          onPointerCancel={handlePointerUp}
-          onPointerLeave={handlePointerLeave}
-        >
-          <div className="inline-flex w-max gap-6 pb-4 whitespace-nowrap auto-scroll-row [will-change:transform] group-hover:[animation-play-state:paused]">
-            {[...teamMembers, ...teamMembers].map((member, index) => (
+        <div className="relative">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 pb-4 justify-items-center">
+            {teamMembers.map((member, index) => (
               <div
                 key={`${member.name}-${index}`}
-                className="flex-none w-52 bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300 p-4 rounded-xl text-center shadow-2xl"
+                className="flex-none w-36 md:w-40 bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300 p-3 rounded-xl text-center shadow-2xl border border-yellow-300/30"
               >
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-24 h-24 rounded-full mx-auto mb-3 object-cover object-center border-2 border-white shadow-md"
+                  className="w-16 h-16 md:w-20 md:h-20 rounded-full mx-auto mb-2 object-cover object-center border-2 border-yellow-400 ring-2 ring-yellow-300 ring-offset-2 ring-offset-slate-200 shadow-md"
                 />
-                <h3 className="text-sm md:text-base font-bold text-slate-900 mb-1 leading-tight break-words">{member.name}</h3>
-                <p className="text-xs md:text-sm text-blue-600 font-medium leading-snug break-words">{member.role}</p>
+                <h3 className="text-xs md:text-sm font-bold text-slate-900 mb-1 leading-tight break-words">{member.name}</h3>
+                <p className="text-xs text-blue-600 font-medium leading-snug break-words">{member.role}</p>
                 <div className="flex items-center justify-center mt-2 text-yellow-500 gap-0.5">
                   <Star className="w-3 h-3 fill-current" />
                   <Star className="w-3 h-3 fill-current" />
