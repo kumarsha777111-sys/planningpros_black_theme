@@ -33,71 +33,64 @@ const SplashScreen = () => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.6, type: "spring", stiffness: 200, damping: 20 }}
-            className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12 max-w-md mx-4 text-center shadow-2xl"
+            className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 md:p-8 max-w-sm mx-4 text-center shadow-2xl"
           >
-            {/* Close Button */}
-            <button
-              onClick={handleClose}
-              className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
-              aria-label="Close splash screen"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
             {/* Logo with Animation */}
             <motion.div
               initial={{ scale: 0.8, rotateY: -180 }}
               animate={{ scale: 1, rotateY: 0 }}
               transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
-              className="mb-6"
+              className="mb-8"
             >
-              <div className="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-2xl p-1 border-8 border-gray-200 shadow-[0_0_16px_4px_rgba(255,255,255,0.65)]">
-                <div className="w-full h-full rounded-xl overflow-hidden">
+              <div className="w-32 h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 mx-auto rounded-2xl p-1 border-8 border-gray-200 shadow-[0_0_20px_6px_rgba(255,255,255,0.75)]">
+                <div className="w-full h-full rounded-xl overflow-hidden bg-gray-900/80">
                   <img
-                    src="/team/pp.jpg"
+                    src="/team/pp.png"
                     alt="Planning Pros & Consultants"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain scale-130"
                   />
                 </div>
               </div>
             </motion.div>
 
-            {/* Company Name */}
-            <motion.h1
+            {/* Loading Text with Animated Dots */}
+            <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-2xl md:text-3xl font-bold text-white mb-2"
+              className="mt-8 flex items-center justify-center"
             >
-              Planning Pros
-            </motion.h1>
+              {/* Static Loading Text */}
+              <motion.span
+                className="text-lg md:text-xl text-white font-medium gradient-text"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+              >
+                Loading
+              </motion.span>
 
-            <motion.h2
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="text-lg md:text-xl font-semibold gradient-text mb-4"
-            >
-              & Consultants
-            </motion.h2>
-
-            {/* Tagline */}
-            <motion.p
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1, duration: 0.6 }}
-              className="text-sm md:text-base text-slate-200 leading-relaxed"
-            >
-              Your trusted partner for IT staff augmentation and professional consulting services
-            </motion.p>
-
-            {/* Loading Animation */}
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: "100%" }}
-              transition={{ delay: 1.2, duration: 1.8, ease: "easeInOut" }}
-              className="mt-6 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"
-            />
+              {/* Animated Dots */}
+              <div className="flex ml-1">
+                {[0, 1, 2].map((index) => (
+                  <motion.span
+                    key={index}
+                    className="text-lg md:text-xl text-white font-medium gradient-text"
+                    animate={{
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      delay: index * 0.5,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    .
+                  </motion.span>
+                ))}
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       )}
